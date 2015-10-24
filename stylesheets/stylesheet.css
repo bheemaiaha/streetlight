@@ -57,9 +57,10 @@ a {
   color: #fff;
   text-align: center;
   background-color: #1B0C2D;
-  background-image: url(../images/smartphone.png), linear-gradient(120deg, #155799, #1B0C2D);
+  background-image: url(../images/smartphone.png), url(../images/02.jpg);
   background-repeat: no-repeat,no-repeat;
-  background-size:   contain;  
+  background-size:   contain, cover ;  
+  background-position: left, right;
 }
 
 @media screen and (min-width: 64em) {
