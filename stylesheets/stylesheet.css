@@ -57,10 +57,9 @@ a {
   color: #fff;
   text-align: center;
   background-color: #1B0C2D;
-  background-image: url(../images/smartphone.png), url(../images/02.jpg);
-  background-repeat: no-repeat,no-repeat;
-  background-size:   contain, cover ;  
-  background-position: left, right;
+  background-image: url(../images/02.jpg);
+  background-repeat: no-repeat;
+  background-size:   cover ;  
 }
 
 @media screen and (min-width: 64em) {
@@ -81,9 +80,6 @@ a {
 }
 .project-name .text{
     color: yellow;
-    background-color: rgba(0,0,0,0.7);
-    padding-left: 2%;
-    padding-right: 2%;
 }
 
 
@@ -105,9 +101,6 @@ a {
   opacity: 0.7; }
 
   .project-tagline .text{
-    background-color: rgba(0,0,0,0.7);
-    padding-left: 1%;
-    padding-right: 1%;
   }
 
 @media screen and (min-width: 64em) {
