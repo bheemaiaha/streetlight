@@ -14,6 +14,8 @@ streetlightApp.controller('matrixCtrl', ['$scope', 'persistentAppSettings', func
 	chinese = chinese.split("");
 
 	fontSizeRatio = parseInt(persistentAppSettings.get('fontSize'))/100.0
+	$scope.flipScreenVertically = persistentAppSettings.getBoolean('verticalFlip')
+	
 	var font_size = parseInt(60 * fontSizeRatio);
 	var columns = c.width/font_size; //number of columns for the rain
 	//an array of drops - one per column

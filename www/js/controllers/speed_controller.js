@@ -1,6 +1,7 @@
 streetlightApp.controller('speedCtrl', ['$scope', 'persistentAppSettings', function ($scope, persistentAppSettings) {
 
   $scope.fontSize = parseInt(persistentAppSettings.get('fontSize'))/100.0
+  $scope.flipScreenVertically = persistentAppSettings.getBoolean('verticalFlip')
   
   if(persistentAppSettings.getBoolean('useMetricUnits')){
     var unitMultiplier = 3.6 // m/s -> kmh

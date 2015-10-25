@@ -4,6 +4,7 @@ streetlightApp.controller('streetNameCtrl', ['$scope', '$http',  'persistentAppS
     var streetNameUpdatedAt = 0
 
     $scope.fontSize = parseInt(persistentAppSettings.get('fontSize'))/100.0
+    $scope.flipScreenVertically = persistentAppSettings.getBoolean('verticalFlip')
 
     var onPositionUpdated = function(position){
       var currentLat = position.coords.latitude

@@ -1,6 +1,7 @@
 streetlightApp.controller('mapCtrl', ['$scope', 'leafletData', 'persistentAppSettings',
   function ($scope, leafletData, persistentAppSettings) {
-
+    $scope.flipScreenVertically = persistentAppSettings.getBoolean('verticalFlip')
+    
     $scope.map = {
           defaults: {
             tileLayer: 'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png',

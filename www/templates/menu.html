@@ -67,6 +67,13 @@
 			ng-checked="autoAdjustBrightness.checked" 
 			ng-click="onAutoAdjustBrightness()"
 			toggle-class="toggle-streetlight">Automatically Adjust Brightness</ion-toggle>
+		</ion-item>
+		<ion-item>
+			<ion-toggle ng-model="verticalFlip.checked" 
+			ng-checked="verticalFlip.checked" 
+			ng-click="onVerticalFlipChange()"
+			toggle-class="toggle-streetlight">Flip Screen Vertically</ion-toggle>
+		</ion-item>
   </ion-list>
   </ion-content>
 </ion-view>

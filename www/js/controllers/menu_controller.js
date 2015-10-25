@@ -10,17 +10,21 @@ streetlightApp.controller('menuCtrl', ['$scope', 'persistentAppSettings',
       }
     })
 
+    if(persistentAppSettings.isUnset('fontSize'))
+      persistentAppSettings.set('fontSize', 50)  
+
   	if(persistentAppSettings.isUnset('useMetricUnits'))
   		persistentAppSettings.set('useMetricUnits', true)
 
     if(persistentAppSettings.isUnset('autoAdjustBrightness'))
-      persistentAppSettings.set('autoAdjustBrightness', true)        	
+      persistentAppSettings.set('autoAdjustBrightness', true)   
 
-    if(persistentAppSettings.isUnset('fontSize'))
-      persistentAppSettings.set('fontSize', 50)  
+    if(persistentAppSettings.isUnset('verticalFlip'))
+      persistentAppSettings.set('verticalFlip', true)      	
 
      $scope.useMetricUnits = {checked : persistentAppSettings.getBoolean('useMetricUnits')}
      $scope.autoAdjustBrightness = { checked : persistentAppSettings.getBoolean('autoAdjustBrightness')}
+     $scope.verticalFlip = { checked : persistentAppSettings.getBoolean('verticalFlip')}
 
      $scope.onUseMetricUnitsChange = function(){
      	persistentAppSettings.set('useMetricUnits', $scope.useMetricUnits.checked) 
@@ -29,6 +33,10 @@ streetlightApp.controller('menuCtrl', ['$scope', 'persistentAppSettings',
     $scope.onAutoAdjustBrightness = function(){
       persistentAppSettings.set('autoAdjustBrightness', $scope.autoAdjustBrightness.checked) 
      }  
+
+    $scope.onVerticalFlipChange = function(){
+      persistentAppSettings.set('verticalFlip', $scope.verticalFlip.checked) 
+    }
 
      $scope.fontSize = {
        value: persistentAppSettings.get('fontSize'),
