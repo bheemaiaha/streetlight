@@ -1,0 +1,72 @@
+<ion-view title="Streetlight" >
+<ion-header-bar style="background-color: #08315A">
+  <h1 class="title" ><span class="ion-android-bicycle" style="color: white"></span>&nbsp;<span style="color: yellow; font-weight: 800">STREETLIGHT</span></h1>
+</ion-header-bar>
+
+  <ion-content>
+  	<ion-list>
+  		<ion-item>
+	  		 <a class="button button-block" href="#/grid">
+	  			Grid
+	  		</a>
+  		</ion-item>
+  		<ion-item>
+	  		 <a class="button button-block" href="#/speed">
+	  			Speed
+	  			<span class="icon-right ion-location phone-feature"></span>
+	  		</a>
+  		</ion-item>
+  		<ion-item>
+			<a class="button button-block" href="#/streetname">
+				Street Name
+	  			<span class="icon-right ion-location phone-feature"></span>
+	  			<span class="icon-right ion-wifi phone-feature"></span>			
+			</a>
+  		</ion-item>
+	  	<ion-item>
+			<a class="button button-block" href="#/map">
+				Map
+	  			<span class="icon-right ion-location phone-feature"></span>
+	  			<span class="icon-right ion-wifi phone-feature"></span>	
+			</a>
+  		</ion-item>  
+  		<ion-item>
+	  		 <a class="button button-block" href="#/kitt">
+	  			Knight Rider Mode
+	  			<span class="icon-right ion-music-note phone-feature"></span>
+	  		</a>
+  		</ion-item>
+  		 <ion-item>
+	  		 <a class="button button-block" href="#/matrix">
+	  			Matrix Movie Mode
+	  			<span class="icon-right ion-location phone-feature"></span>
+	  		</a>
+  		</ion-item>
+  		<ion-item class="item-divider">
+	        <b>Font Size</b>
+	    </ion-item>
+  		<ion-item class="range">
+	  		<i class="icon ion-ios-minus-outline"></i>
+	  		<input type="range" 
+	  		name="fontSize" 
+	  		min="fontSize.min"  
+	  		max="fontSize.max" 
+	  		ng-model="fontSize.value" 
+	  		on-release="onFontSizeChange()"
+	  		ng-click="onFontSizeChange()">
+	  		<i class="icon ion-android-add-circle"></i>
+		</ion-item>
+  		<ion-item>
+			<ion-toggle ng-model="useMetricUnits.checked" 
+			ng-checked="useMetricUnits.checked" 
+			ng-click="onUseMetricUnitsChange()"
+			toggle-class="toggle-streetlight">Use Metric Units</ion-toggle>
+  		</ion-item> 	
+   		<ion-item>
+			<ion-toggle ng-model="autoAdjustBrightness.checked" 
+			ng-checked="autoAdjustBrightness.checked" 
+			ng-click="onAutoAdjustBrightness()"
+			toggle-class="toggle-streetlight">Automatically Adjust Brightness</ion-toggle>
+  </ion-list>
+  </ion-content>
+</ion-view>
